@@ -1,0 +1,6 @@
+{
+  "name": "sistema ebc-ac-usa",
+  "description": "Sistema de Gestão de Clientes, Contratos e Financeiro para EBC e Andreia Cakes USA.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

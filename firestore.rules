@@ -1,0 +1,26 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Bloqueio padrão para qualquer coleção não especificada (Boas práticas de segurança)
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // ==========================================
+    // REGRAS PARA A COLEÇÃO 'leads'
+    // ==========================================
+    match /leads/{leadId} {
+      // Como o aplicativo gerencia o controle de acesso e perfil (Admin "1306" e Viewer "0711")
+      // diretamente no cliente, a leitura e a escrita da coleção 'leads' devem ser liberadas.
+      // Isso garante o funcionamento fluido do painel administrativo, cadastros manuais, lançamentos financeiros
+      // e o fluxo de assinatura digital autônoma do cliente final.
+      allow read, write: if true;
+    }
+
+    // Permite validação de conexão inicial
+    match /test/{testId} {
+      allow read: if true;
+    }
+  }
+}

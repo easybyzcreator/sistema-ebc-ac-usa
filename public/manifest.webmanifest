@@ -1,0 +1,21 @@
+{
+  "name": "sistema ebc-ac-usa",
+  "short_name": "sistema ebc-ac-usa",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F7F2EC",
+  "theme_color": "#342825",
+  "description": "Sistema de Gestão de Clientes, Contratos e Financeiro para EBC e Andreia Cakes USA.",
+  "icons": [
+    {
+      "src": "https://i.ibb.co/5hdFFDRv/patitour-34.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://i.ibb.co/5hdFFDRv/patitour-34.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
